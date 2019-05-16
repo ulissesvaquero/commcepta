@@ -21,7 +21,6 @@ class Vendedor extends BaseVendedor
             [['nome'], 'string', 'max' => 100],
             [['telefone'], 'string', 'max' => 20],
             [['endereco'], 'string', 'max' => 255],
-            [['is_ativo'], 'string', 'max' => 4]
         ]);
     }
 	
