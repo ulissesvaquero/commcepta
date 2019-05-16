@@ -20,7 +20,7 @@ class Venda extends BaseVenda
             [['vendedor_id'], 'required'],
             [['vendedor_id'], 'integer'],
             [['valor_total'], 'number'],
-            [['dt_criacao'], 'safe']
+            [['dt_criacao'], 'safe'],
         ]);
     }
 	

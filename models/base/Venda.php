@@ -11,6 +11,7 @@ use Yii;
  * @property integer $vendedor_id
  * @property double $valor_total
  * @property string $dt_criacao
+ * @property integer $is_ativo
  *
  * @property \app\models\Vendedor $vendedor
  * @property \app\models\VendaProduto[] $vendaProdutos
@@ -41,7 +42,7 @@ class Venda extends \yii\db\ActiveRecord
             [['vendedor_id'], 'required'],
             [['vendedor_id'], 'integer'],
             [['valor_total'], 'number'],
-            [['dt_criacao'], 'safe']
+            [['dt_criacao'], 'safe'],
         ];
     }
 
@@ -60,9 +61,10 @@ class Venda extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'vendedor_id' => 'Vendedor ID',
+            'vendedor_id' => 'Vendedor',
             'valor_total' => 'Valor Total',
-            'dt_criacao' => 'Dt Criacao',
+            'dt_criacao' => 'Data',
+            'is_ativo' => 'Is Ativo',
         ];
     }
     

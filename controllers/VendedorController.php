@@ -146,7 +146,7 @@ class VendedorController extends Controller
 
     
     /**
-     *  Procura um produto baseado em sua chave primária
+     *  Procura um vendedor baseado em sua chave primária
      *  caso não encontre um erro 404 será exposto
      * @param integer $id
      * @return Vendedor the loaded model
