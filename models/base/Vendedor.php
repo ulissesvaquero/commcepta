@@ -11,6 +11,7 @@ use Yii;
  * @property string $nome
  * @property string $telefone
  * @property string $endereco
+ * @property integer $is_ativo
  *
  * @property \app\models\Venda[] $vendas
  */
@@ -39,7 +40,8 @@ class Vendedor extends \yii\db\ActiveRecord
             [['nome'], 'required'],
             [['nome'], 'string', 'max' => 100],
             [['telefone'], 'string', 'max' => 20],
-            [['endereco'], 'string', 'max' => 255]
+            [['endereco'], 'string', 'max' => 255],
+            [['is_ativo'], 'string', 'max' => 4]
         ];
     }
 
@@ -61,6 +63,7 @@ class Vendedor extends \yii\db\ActiveRecord
             'nome' => 'Nome',
             'telefone' => 'Telefone',
             'endereco' => 'Endereco',
+            'is_ativo' => 'Is Ativo',
         ];
     }
     

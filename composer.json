@@ -32,7 +32,12 @@
 
 		"mootensai/yii2-enhanced-gii": "dev-master",
 		"kartik-v/yii2-mpdf": "dev-master",
-		"kartik-v/yii2-tree-manager": "dev-master"
+		"kartik-v/yii2-tree-manager": "dev-master",
+		
+		
+		"kartik-v/yii2-money" : "1.2"
+		
+		
     },
     "config": {
         "process-timeout": 1800,

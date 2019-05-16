@@ -11,6 +11,7 @@ use Yii;
  * @property string $nome
  * @property string $descricao
  * @property double $valor
+ * @property integer $is_ativo
  *
  * @property \app\models\VendaProduto[] $vendaProdutos
  */
@@ -39,7 +40,7 @@ class Produto extends \yii\db\ActiveRecord
             [['nome', 'valor'], 'required'],
             [['descricao'], 'string'],
             [['valor'], 'number'],
-            [['nome'], 'string', 'max' => 100]
+            [['nome'], 'string', 'max' => 100],
         ];
     }
 
@@ -61,6 +62,7 @@ class Produto extends \yii\db\ActiveRecord
             'nome' => 'Nome',
             'descricao' => 'Descricao',
             'valor' => 'Valor',
+            'is_ativo' => 'Is Ativo',
         ];
     }
     

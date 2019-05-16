@@ -5,12 +5,27 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'commcepta',
+    'name' => 'Commcepta Teste',
     'language' => 'pt-BR',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
+    ],
+    'modules' => [
+        'gridview' => [
+            'class' => '\kartik\grid\Module'
+        ],
+        'datecontrol' => [
+            'class' => '\kartik\datecontrol\Module',
+            // see settings on http://demos.krajee.com/datecontrol#module
+        ],
+        // If you use tree table
+        'treemanager' =>  [
+            'class' => '\kartik\tree\Module',
+            // see settings on http://demos.krajee.com/tree-manager#module
+        ],
     ],
     'components' => [
         'request' => [
@@ -44,6 +59,14 @@ $config = [
             ],
         ],
         'db' => $db,
+        'formatter' => [
+            'class' => 'yii\i18n\formatter',
+            'thousandSeparator' => '.',
+            'decimalSeparator' => ',',
+            'dateFormat' => 'dd/MM/yyyy',
+            'datetimeFormat' => 'dd/MM/yyyy HH:mm:ss',
+            'currencyCode' => '',
+        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -70,6 +93,14 @@ if (YII_ENV_DEV) {
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
         //'allowedIPs' => ['127.0.0.1', '::1'],
+        'generators' => [ //here
+            'crud-traduzido' => [ // generator name
+                'class' => 'mootensai\enhancedgii\crud\Generator', // generator class
+                'templates' => [ //setting for out templates
+                    'traducao' => '@app/gii/crud/default', // template name => path to template
+                ]
+            ]
+        ],
     ];
 }
 

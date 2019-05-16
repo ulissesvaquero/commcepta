@@ -20,7 +20,7 @@ class Produto extends BaseProduto
             [['nome', 'valor'], 'required'],
             [['descricao'], 'string'],
             [['valor'], 'number'],
-            [['nome'], 'string', 'max' => 100]
+            [['nome'], 'string', 'max' => 100],
         ]);
     }
 	
