@@ -26,6 +26,9 @@ $config = [
             'class' => '\kartik\tree\Module',
             // see settings on http://demos.krajee.com/tree-manager#module
         ],
+        'utility' => [
+            'class' => 'c006\utility\migration\Module',
+        ],
     ],
     'components' => [
         'request' => [

@@ -35,7 +35,8 @@
 		"kartik-v/yii2-tree-manager": "dev-master",
 		
 		
-		"kartik-v/yii2-money" : "1.2"
+		"kartik-v/yii2-money" : "1.2",
+		"c006/yii2-migration-utility": "dev-master"
 		
 		
     },

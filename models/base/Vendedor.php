@@ -61,7 +61,7 @@ class Vendedor extends \yii\db\ActiveRecord
             'id' => 'ID',
             'nome' => 'Nome',
             'telefone' => 'Telefone',
-            'endereco' => 'Endereco',
+            'endereco' => 'Endereço',
             'is_ativo' => 'Is Ativo',
         ];
     }
